@@ -1,0 +1,9 @@
+{
+  "name": "alexa-datadog",
+  "custom": {
+    "optimize": true
+  },
+  "plugins": [
+    "serverless-optimizer-plugin"
+  ]
+}

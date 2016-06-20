@@ -1,0 +1,40 @@
+{
+  "name": "queryDatadog",
+  "runtime": "nodejs4.3",
+  "description": "Serverless Lambda function for project: alexa-datadog",
+  "customName": false,
+  "customRole": false,
+  "handler": "functions/queryDatadog/handler.handler",
+  "timeout": 6,
+  "memorySize": 1024,
+  "authorizer": {},
+  "custom": {
+    "excludePatterns": [],
+    "optimize": {
+      "exclude": [ "aws-sdk" ],
+      "transforms": [
+        {
+          "name": "babelify",
+          "opts": {
+            "presets": [
+              "es2015"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "endpoints": [],
+  "events": [],
+  "environment": {
+    "SERVERLESS_PROJECT": "${project}",
+    "SERVERLESS_STAGE": "${stage}",
+    "SERVERLESS_REGION": "${region}",
+    "DATADOG_API_KEY": "${datadogApiKey}",
+    "DATADOG_APP_KEY": "${datadogAppKey}"
+  },
+  "vpc": {
+    "securityGroupIds": [],
+    "subnetIds": []
+  }
+}
