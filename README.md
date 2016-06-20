@@ -53,7 +53,7 @@ QueryIntent to check the {Query}
 
 # Additional Configuration
 
-You'll also need to supply your Datadog API and app keys in order for the queries to work properly. These should be add as Serverless variables, such as through the `_meta/variables/s-veriables-dev.json` file. Here's the format you'll want to use in that file:
+You'll also need to supply your Datadog API and app keys in order for the queries to work properly. These should be add as Serverless variables, such as through the `_meta/variables/s-variables-dev.json` file. Here's the format you'll want to use in that file:
 
 ```language-json
 {
