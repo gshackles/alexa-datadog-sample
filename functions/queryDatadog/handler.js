@@ -29,7 +29,7 @@ function processIntent(intentRequest, session) {
     if (querySlot.value && querySlot.value.toLowerCase() === 'cpu') {
       return queryCPU().then(readings => {
         const hostSpeechFragments = readings.map(reading =>
-          `${reading.name} is at ${reading.value}%`).join('. ');
+          `${reading.name} is at ${Math.round(reading.value*100)/100}%`).join('. ');
         const speechOutput = `Here are the current CPU loads. ${hostSpeechFragments}`;
         
         return buildSpeechletResponse(
