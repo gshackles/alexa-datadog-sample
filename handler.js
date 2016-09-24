@@ -1,7 +1,7 @@
 import process from 'process';
 import dogapi from 'dogapi';
 import Promise from 'bluebird';
-import {buildSpeechletResponse, buildResponse} from '../../lib/helpers';
+import { buildSpeechletResponse, buildResponse } from './lib/helpers';
 
 const queryDatadog = Promise.promisify(dogapi.metric.query);
 
@@ -49,10 +49,10 @@ function processIntent(intentRequest, session) {
   ));
 }
 
-module.exports.handler = function(event, context, callback) {
+module.exports.queryDatadog = (event, context, callback) => {
   dogapi.initialize({
-    api_key: process.env.DATADOG_API_KEY,
-    app_key: process.env.DATADOG_APP_KEY
+    api_key: 'TODO',
+    app_key: 'TODO'
   });
   
   if (event.request.type === 'IntentRequest') {

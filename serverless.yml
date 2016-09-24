@@ -1,0 +1,12 @@
+service: alexa-datadog
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+plugins:
+  - serverless-webpack
+
+functions:
+  queryDatadog:
+    handler: handler.queryDatadog

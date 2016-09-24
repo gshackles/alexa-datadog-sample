@@ -38,6 +38,8 @@ node_modules
 #SERVERLESS
 admin.env
 .env
+.serverless
+.webpack
 
 #Ignore _meta folder
 _meta
